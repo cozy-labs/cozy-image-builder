@@ -36,6 +36,14 @@
   "post-processors": [
       {
           "type": "compress",
+          "output": "packer_{{.BuildName}}_{{.BuilderType}}.tgz",
+          "compression_level": 9,
+          "keep_input_artifact": true
+      },
+      {
+          "type": "compress",
+          "output": "packer_{{.BuildName}}_{{.BuilderType}}.zip",
+          "compression_level": 9,
           "keep_input_artifact": true
       },
       {

@@ -3,3 +3,5 @@ packer_cache/
 output-virtualbox-iso/
 packer_virtualbox-iso_virtualbox-iso
 packer_virtualbox-iso_virtualbox.box
+packer_virtualbox-iso_virtualbox-iso.tgz
+packer_virtualbox-iso_virtualbox-iso.zip
