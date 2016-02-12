@@ -1,6 +1,7 @@
 {
     "builders": [
         {
+            "vm_name": "cozy",
             "type": "virtualbox-iso",
             "boot_command": [
                 "<esc><esc><enter><wait>",
