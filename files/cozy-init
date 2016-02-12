@@ -18,7 +18,7 @@ echo "postfix postfix/main_mailer_type string Internet Site" | debconf-set-selec
 echo "postfix postfix/mailname string ${COZY_URL}" | debconf-set-selections 2>&1 | tee -a $LOGS
 echo "cozy cozy/fqdn string ${COZY_URL}" | debconf-set-selections 2>&1 | tee -a $LOGS
 echo 'cozy cozy/certificate text ' | debconf-set-selections 2>&1 | tee -a $LOGS
-dpkg-reconfigure postfix 2>&1 | tee -a $LOGS
+dpkg-reconfigure -u -p high postfix 2>&1 | tee -a $LOGS
 apt-get install -qy cozy cozy-nginx 2>&1 | tee -a $LOGS
 
 echo 'Done' 2>&1 | tee -a $LOGS
